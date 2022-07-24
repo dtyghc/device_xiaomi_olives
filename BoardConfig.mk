@@ -4,22 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Partitions
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_VENDORIMAGE_PARTITION_SIZE := 1073741824
+# Inherit from common sdm439-common
+include device/xiaomi/sdm439-common/BoardConfigCommon.mk
 
-# Inherit from common mithorium-common
-include device/xiaomi/mithorium-common/BoardConfigCommon.mk
-
-DEVICE_PATH := device/xiaomi/Mi439
-
-# Android Verified Boot
-BOARD_AVB_ENABLE := true
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
-BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
-BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA2048
-BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
-BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
+DEVICE_PATH := device/xiaomi/mi439
 
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := pine,olive,olivelite,olivewood,olives,mi439,Mi439
@@ -28,50 +16,24 @@ TARGET_OTA_ASSERT_DEVICE := pine,olive,olivelite,olivewood,olives,mi439,Mi439
 TARGET_SCREEN_DENSITY := 320
 
 # HIDL
-DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/manifest/gatekeeper.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_mi439
 TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_mi439
 
-# Kernel
-BOARD_BOOTIMG_HEADER_VERSION := 1
-BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
-BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0x78B0000 loop.max_part=7
-BOARD_KERNEL_SEPARATED_DTBO := true
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CONFIG := mi439-perf_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm439
-
-# Partitions
-TARGET_COPY_OUT_VENDOR := vendor
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
-BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
-BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
-BOARD_DTBOIMG_PARTITION_SIZE := 8388608
-BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 1966587904 # 1966604288 - 16384
-
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-
-# Recovery
-BOARD_INCLUDE_RECOVERY_DTBO := true
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/recovery.fstab
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2021-07-01
+VENDOR_SECURITY_PATCH := 2022-02-05
 
 # SELinux
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/biometrics/sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Inherit from the proprietary version
-include vendor/xiaomi/Mi439/BoardConfigVendor.mk
+include vendor/xiaomi/mi439/BoardConfigVendor.mk

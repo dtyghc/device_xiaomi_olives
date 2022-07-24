@@ -3,36 +3,6 @@
 # olivewood Package version: Redmi/olivewood/olivewood:10/QKQ1.191014.001/V12.0.4.0.QCQIDXM:user/release-keys
 # PAN Package version: Nokia/Panther_00WW/PAN_sprout:11/RKQ1.200928.002/00WW_3_240:user/release-keys
 
-# ACDB
-vendor/etc/acdbdata/adsp_avs_config.acdb
-vendor/etc/acdbdata/olive/SDM439_SKU1_Global_cal.acdb
-vendor/etc/acdbdata/olive/SDM439_SKU1_General_cal.acdb
-vendor/etc/acdbdata/olive/SDM439_SKU1_workspaceFile.qwsp
-vendor/etc/acdbdata/olive/SDM439_SKU1_Bluetooth_cal.acdb
-vendor/etc/acdbdata/olive/SDM439_SKU1_Speaker_cal.acdb
-vendor/etc/acdbdata/olive/SDM439_SKU1_Handset_cal.acdb
-vendor/etc/acdbdata/olive/SDM439_SKU1_Headset_cal.acdb
-vendor/etc/acdbdata/olive/SDM439_SKU1_Hdmi_cal.acdb
-
-# ACDB - from pine
-vendor/etc/acdbdata/pine/SDM439_SKU1_Bluetooth_cal.acdb
-vendor/etc/acdbdata/pine/SDM439_SKU1_General_cal.acdb
-vendor/etc/acdbdata/pine/SDM439_SKU1_Global_cal.acdb
-vendor/etc/acdbdata/pine/SDM439_SKU1_Handset_cal.acdb
-vendor/etc/acdbdata/pine/SDM439_SKU1_Hdmi_cal.acdb
-vendor/etc/acdbdata/pine/SDM439_SKU1_Headset_cal.acdb
-vendor/etc/acdbdata/pine/SDM439_SKU1_Speaker_cal.acdb
-vendor/etc/acdbdata/pine/SDM439_SKU1_workspaceFile.qwsp
-
-# ADSP Modules
-vendor/lib/rfsa/adsp/dirac_resource.dar
-vendor/lib/rfsa/adsp/libdirac-capiv2.so
-
-# Audio dirac - from mido
-vendor/etc/diracmobile.config|d781cd6798a7481a8f7128d144abfb2b8794212d
-vendor/lib/soundfx/libdirac.so|f63826a905b520fa524e4c1b147be7cf65240953
-vendor/lib/libDiracAPI_SHARED.so|42b49679d38eca93fead05ea06ddbdc8108fd4b1
-
 # Camera stack
 vendor/bin/mm-qjpeg-dec-test
 vendor/bin/mm-qjpeg-enc-test
@@ -3439,8 +3409,20 @@ vendor/etc/camera/vdclear_hht_params_i.xml
 vendor/etc/camera/vdclear_hht_params_ii.xml
 vendor/etc/camera/vdclear_hht_params_iii.xml
 
-# Charger
-vendor/bin/hvdcp_opti
+# Camera-firmware
+vendor/firmware/cpp_firmware_v1_10_0.fw
+vendor/firmware/cpp_firmware_v1_12_0.fw
+vendor/firmware/cpp_firmware_v1_12_1.fw
+vendor/firmware/cpp_firmware_v1_1_1.fw
+vendor/firmware/cpp_firmware_v1_1_6.fw
+vendor/firmware/cpp_firmware_v1_2_0.fw
+vendor/firmware/cpp_firmware_v1_4_0.fw
+vendor/firmware/cpp_firmware_v1_5_0.fw
+vendor/firmware/cpp_firmware_v1_5_1.fw
+vendor/firmware/cpp_firmware_v1_5_2.fw
+vendor/firmware/cpp_firmware_v1_6_0.fw
+vendor/firmware/cpp_firmware_v1_8_0.fw
+
 
 # Consumer IR
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.msm8937.so
@@ -3471,29 +3453,6 @@ vendor/firmware/C3E_FT5446_Hnlens.bin
 vendor/firmware/C3E_FT5446_Truly.bin
 vendor/firmware/gt1x_fw.bin
 
-# Gatekeeper (QTI) - from PAN
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
-vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
-
-# Graphics firmware - from PAN
-vendor/firmware/a506_zap.b00
-vendor/firmware/a506_zap.b01
-vendor/firmware/a506_zap.b02
-vendor/firmware/a530_pfp.fw
-vendor/firmware/a530_pm4.fw
-
-# Graphics firmware
-vendor/firmware/a506_zap.mdt
-
-# Keymaster (QTI) - from PAN
-vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
-vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc
-vendor/lib64/libkeymasterdeviceutils.so
-vendor/lib64/libkeymasterutils.so
-vendor/lib64/libqcbor.so
-vendor/lib64/libqtikeymaster4.so
-
 # Sensors
 vendor/bin/sensors.qti:vendor/bin/sensors.qti.pine
 vendor/bin/sensors.qti:vendor/bin/sensors.qti.olive
@@ -3503,12 +3462,3 @@ vendor/lib64/libsensor1.so
 # Sensors (SSC)
 vendor/lib64/libsensor_reg.so
 vendor/lib64/sensors.ssc.so
-
-# Thermal configs
-vendor/etc/thermal-engine-camera.conf
-vendor/etc/thermal-engine-high.conf
-vendor/etc/thermal-engine-map.conf
-vendor/etc/thermal-engine-nolimits.conf
-vendor/etc/thermal-engine-normal.conf
-vendor/etc/thermal-engine-sgame.conf
-vendor/etc/thermal-engine.conf

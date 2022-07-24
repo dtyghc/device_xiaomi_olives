@@ -1,5 +1,3 @@
 # FM
 type sysfs_fm_lan, fs_type, sysfs_type;
 
-# Huaqin
-type huaqin_sysfs, fs_type, sysfs_type;
