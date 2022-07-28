@@ -19,6 +19,10 @@
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
      <bool name="config_showNavigationBar">true</bool>
+        <!-- Face unlock -->
+    <bool name="config_faceAuthOnlyOnSecurityView">true</bool>
+       <!-- Whether device has dash charging support -->
+   <bool name="config_hasDashCharger">true</bool>
 
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
