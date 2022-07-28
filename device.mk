@@ -8,7 +8,7 @@
 TARGET_EXCLUDE_CRYPTFSHW := true
 
 # Inherit from mithorium-common
-$(call inherit-product, device/xiaomi/sdm439-common/sdm439.mk)
+$(call inherit-product, device/xiaomi/olives-common/olives.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Overlays
@@ -54,4 +54,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/xiaomi/mi439/mi439-vendor.mk)
+$(call inherit-product, vendor/xiaomi/olives/mi439-vendor.mk)
