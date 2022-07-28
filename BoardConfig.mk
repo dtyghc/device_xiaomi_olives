@@ -5,9 +5,9 @@
 #
 
 # Inherit from common sdm439-common
-include device/xiaomi/sdm439-common/BoardConfigCommon.mk
+include device/xiaomi/olives-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/mi439
+DEVICE_PATH := device/xiaomi/olives
 
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := pine,olive,olivelite,olivewood,olives,mi439,Mi439
@@ -36,4 +36,4 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/biometrics/sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Inherit from the proprietary version
-include vendor/xiaomi/mi439/BoardConfigVendor.mk
+include vendor/xiaomi/olives/BoardConfigVendor.mk
