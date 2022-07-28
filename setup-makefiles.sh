@@ -8,8 +8,8 @@
 
 set -e
 
-export DEVICE=mi439
-export DEVICE_COMMON=sdm439-common
+export DEVICE=olives
+export DEVICE_COMMON=dotos-common
 export VENDOR=xiaomi
 
 "./../../${VENDOR}/${DEVICE_COMMON}/setup-makefiles.sh" "$@"
